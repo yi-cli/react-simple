@@ -1,0 +1,43 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "label": "Project description",
+      "default": "A React.js simple project"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author"
+    },
+    "license": {
+      "type": "string",
+      "label": "License",
+      "default": "MIT"
+    },
+    "css": {
+      "type": "list",
+      "message": "Select CSS preprocessor",
+      "choices": ["sass", "less", "css"]
+    },
+    "stream": {
+      "type": "list",
+      "message": "Select Data stream",
+      "choices": ["redux", "mbox"]
+    },
+    "lint": {
+      "type": "confirm",
+      "message": "Use ESLint to lint your code?",
+      "default": true
+    }
+  },
+  "filters": {
+    ".eslintrc.json": "lint"
+  },
+  "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dll\n npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dll\n  npm run dev{{/inPlace}}"
+}
