@@ -1,4 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
+ul,ol,li { list-style:none; }
+a{text-decoration: none;}
+a:focus{outline-style:none;}
+a,button{cursor:pointer;}
+table{border-collapse:collapse;border-spacing:0;}
+input,select{font-family:inherit;font-size:inherit;font-weight:inherit;vertical-align: middle;outline:none; }
