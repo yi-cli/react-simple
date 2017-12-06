@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   devtool: '#source-map',
   entry: {
-    vendor: ['react', 'react-dom', 'react-router-dom', 'axios']
+    vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'axios']
   },
   output: {
     path: path.join(__dirname, './static/js'),
@@ -16,6 +16,11 @@ module.exports = {
     // 故这里需要和webpack.DllPlugin中的`name: '[name]_library',`保持一致。
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
     new webpack.DllPlugin({
       path: path.join(__dirname, '.', '[name]-manifest.json'),
       name: '[name]_library',
