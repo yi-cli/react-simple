@@ -3,7 +3,8 @@
     ["env",
       {"modules": false}
     ],
-    "react"
+    "react",
+    "stage-3"
   ],
-  "plugins": ["transform-runtime", "transform-object-rest-spread"]
+  "plugins": ["transform-runtime", "transform-decorators-legacy"]
 }
