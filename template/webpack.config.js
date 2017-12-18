@@ -23,10 +23,10 @@ module.exports = {
         exclude: /(node_modules)/
       },
       {
-        test: /\.(css|less)$/,
+        test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader']
+          use: ['css-loader', 'sass-loader']
         })
       },
       {

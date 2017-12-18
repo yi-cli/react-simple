@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   devtool: '#source-map',
   entry: {
-    vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'axios']
+    vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'redux-thunk', 'axios']
   },
   output: {
     path: path.join(__dirname, './static/js'),
