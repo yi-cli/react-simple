@@ -8,7 +8,7 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <div class="logo"></div>
+      <div className="logo"></div>
     )
   }
 }
