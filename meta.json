@@ -23,12 +23,7 @@
     "css": {
       "type": "list",
       "message": "Select CSS preprocessor",
-      "choices": ["sass", "less", "css"]
-    },
-    "stream": {
-      "type": "list",
-      "message": "Select Data stream",
-      "choices": ["redux", "mbox"]
+      "choices": ["sass", "less"]
     },
     "lint": {
       "type": "confirm",
@@ -37,7 +32,10 @@
     }
   },
   "filters": {
-    ".eslintrc.json": "lint"
+    ".eslint*": "lint",
+    "src/**/**/*.scss": "css === 'less'",
+    "src/**/**/*.less": "grammar === 'sass'",
+    ""
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dll\n npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dll\n  npm run dev{{/inPlace}}"
 }
